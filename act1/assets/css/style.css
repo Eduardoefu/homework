@@ -1,0 +1,132 @@
+:root {
+    --color-borde: rgb(47, 51, 54);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0,0,0);
+}
+.container-comentarios {
+    width: 800px;
+    margin: 100px auto;
+    color: white;
+}
+.container-comentarios > .comentario {
+    margin-bottom: 10px;
+}
+.container-comentarios .comentario {
+    display: flex;
+}
+.container-comentarios .comentario .linea {
+    position: relative;
+    width: 10px;
+    height: 50%;
+    border-left: solid 1px var(--color-borde);
+    border-bottom: solid 1px var(--color-borde);
+    border-radius: 0 0 0 8px;
+}
+.container-comentarios .comentario .comentario-env {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-comentarios .comentario .comentario-env .contenido {
+    width: 100%;
+    display: flex;
+    border: solid 1px gray;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: var(--color-borde)
+}
+.container-comentarios .comentario .comentario-env .contenido img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .header .username {
+    font-weight: bold;
+}
+
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .otro {
+    color: #999;
+}
+
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .vistas {
+    color: white; 
+    font-weight: bold;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones {
+    display: flex;
+    gap: 5px;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+/*comentar*/
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .comentarios:before {
+    content: url("../img/comentarios.png");
+    display: block;
+    float: left;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .comentarios:hover {
+    color: rgb(29, 155, 240);
+}
+/*repostear*/
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .repostear:before {
+    content: url("../img/repostear.png");
+    display: block;
+    float: left;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .repostear:hover {
+    color: rgb(0, 186, 124);
+}
+/*reaccionar*/
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .reaccion:before {
+    content: url("../img/reaccion.png");
+    display: block;
+    float: left;
+}
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .reaccion:hover {
+    color: rgb(249, 24, 128);
+}
+/*guardar*/
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .guardar:before {
+    content: url("../img/guardar.png");
+    display: block;
+    float: left;
+}
+/*compartir*/
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones .compartir:before {
+    content: url("../img/compartir.png");
+    display: block;
+    float: left;
+}
+/*yall*/
+.container-comentarios .comentario .comentario-env .contenido .comentario-info .acciones span {
+    padding-left: 7px;
+}
+.container-comentarios .comentario .respuestas {
+    padding-top: 10px;
+    position: relative;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container-comentarios .comentario .respuestas::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-borde);
+    width: 1px;
+    top: 0;
+    height: calc(100% - 60px);
+}
